@@ -5,7 +5,7 @@ import retrofit2.http.*
 interface OTP {
     @FormUrlEncoded
     @POST("/api/v1/generate-otp/")
-    fun generate_OTP(@Field("type")type:String,@Field("username")username:String):Call<String>
+    fun generate_OTP(@Field("type")type:String,@Field("username")username:String):Call<Void>
 
     @FormUrlEncoded
     @POST("/api/v1/verify-otp/")
