@@ -10,4 +10,8 @@ interface OTP {
     @FormUrlEncoded
     @POST("/api/v1/verify-otp/")
     fun verify_OTP(@Field("otp")otp:String,@Field("username")username:String):Call<JsonObject>
+
+    @FormUrlEncoded
+    @POST("/api/v1/signup/")
+    fun signUp(@Field("username")username:String,@Field("first_name")first_name:String,@Field("password")password:String,@Field("isServiceProvider")isServiceProvider:Boolean,@Field("verifiedToken")verifiedToken:String):Call<JsonObject>
 }

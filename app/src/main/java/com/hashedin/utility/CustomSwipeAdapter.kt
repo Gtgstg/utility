@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 
 class CustomSwipeAdapter() : PagerAdapter(), Parcelable {
-    val image_resources= arrayOf(R.drawable.carousel1,R.drawable.carousel2,R.drawable.carousel3,R.drawable.back)
+    val image_resources= arrayOf(R.drawable.carousel1,R.drawable.carousel2,R.drawable.carousel3)
     lateinit var ctx:Context
     lateinit var layoutInflater: LayoutInflater
 
@@ -46,7 +46,7 @@ class CustomSwipeAdapter() : PagerAdapter(), Parcelable {
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        super.destroyItem(container, position, `object`)
+        container.removeView(`object`as LinearLayout)
     }
     override fun writeToParcel(parcel: Parcel, flags: Int) {
 
