@@ -3,12 +3,8 @@ package com.hashedin.utility
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
-import android.util.Log
 import android.widget.EditText
-import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
-import com.hashedin.utility.services.OTP
 import com.hashedin.utility.services.serviceBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -40,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 //                    val body=response.toString()
 //                    Log.i("Hi",body)
 //                    val gson=GsonBuilder().create()
-//                    val data=gson.fromJson(body,Data::class.java)
+//                    val data=gson.fromJson(response.body(),Data::class.java).verified_user
 //                    intent.putExtra("Token",data)
 //                    Log.i("Hi",data.toString())
 //                    Log.i("P",data.message)
@@ -54,7 +50,11 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        button2.setOnClickListener{
+        button.setOnClickListener {
+            val intent= Intent(this,Welcome::class.java)
+            startActivity(intent)
+        }
+        button22.setOnClickListener{
             val name=editText.text
             val emailid=editText2.text.toString()
             val apiService=serviceBuilder().getAPIInstance()
@@ -72,4 +72,4 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-class Data(val message: String,val url:String)
+class Data(val verified_user:String)

@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 
 class CustomSwipeAdapter() : PagerAdapter(), Parcelable {
-    val image_resources= arrayOf(R.drawable.carousel1,R.drawable.carousel2,R.drawable.carousel3)
+    val image_resources= arrayOf(R.drawable.carousel1,R.drawable.carousel2,R.drawable.carousel3,R.drawable.back)
     lateinit var ctx:Context
     lateinit var layoutInflater: LayoutInflater
 

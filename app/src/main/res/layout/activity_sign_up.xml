@@ -32,7 +32,7 @@
             app:layout_constraintVertical_bias="0.113" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button22"
             android:layout_width="18dp"
             android:layout_height="19dp"
             android:background="@drawable/back"
@@ -53,7 +53,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/button22"
             app:layout_constraintVertical_bias="0.222" />
 
         <Button
